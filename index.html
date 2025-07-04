@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Very Basic Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS for smooth scrolling and font */
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Inter', sans-serif;
+        }
+        body {
+            background-color: #ffffff; /* White background */
+            color: #333333; /* Darker text for contrast */
+        }
+        /* Hide scrollbar for aesthetic purposes if preferred, but keep scrolling functional */
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        body {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation Bar -->
+    <header class="bg-gray-100 border-b border-gray-200 sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-gray-800">My Portfolio</a>
+            <div class="hidden md:flex space-x-4">
+                <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About</a>
+                <a href="#skills" class="text-gray-700 hover:text-blue-600 font-medium">Skills</a>
+                <a href="#projects" class="text-gray-700 hover:text-blue-600 font-medium">Projects</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 text-gray-700 hover:bg-gray-200 focus:outline-none">
+                <!-- Simple hamburger icon -->
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-50 border-t border-gray-200 py-2">
+            <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600 font-medium">About</a>
+            <a href="#skills" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600 font-medium">Skills</a>
+            <a href="#projects" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600 font-medium">Projects</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600 font-medium">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+
+        <!-- Hero/About Section -->
+        <section id="about" class="bg-gray-50 p-8 mb-8 flex flex-col md:flex-row items-center text-center md:text-left">
+            <div class="md:w-1/3 mb-6 md:mb-0 md:mr-8">
+                <img src="file:///C:/Users/USER/Downloads/IMG_20250323_233621_476.webp" alt="Your Photo" class="w-48 h-48 object-cover mx-auto md:mx-0 border border-gray-300">
+            </div>
+            <div class="md:w-2/3">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Hello, I'm <span class="text-blue-600">ADHITH</span>!</h2>
+                <p class="text-lg md:text-xl text-gray-700 mb-6">
+                    I'm an <span class="font-semibold text-gray-800">ENGINEER</span> in the feild of <span class="font-semibold text-gray-800">INFORMATION TECHNOLOGY</span>.
+                </p>
+                <a href="#contact" class="inline-block bg-blue-600 text-white px-6 py-2 text-base font-semibold hover:bg-blue-700">
+                    Contact Me
+                </a>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="bg-gray-50 p-8 mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Skill Category 1 -->
+                <div class="bg-white p-4 border border-gray-200">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">Programming</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>HTML & CSS</li>
+                    </ul>
+                </div>
+                <!-- Skill Category 2 -->
+                <div class="bg-white p-4 border border-gray-200">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">Tools</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Git</li>
+                        <li>VS Code</li>
+                    </ul>
+                </div>
+                <!-- Skill Category 3 -->
+                <div class="bg-white p-4 border border-gray-200">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">Concepts</h3>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Web Development</li>
+                        <li>Problem Solving</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="bg-gray-50 p-8 mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Project Card 1 -->
+                <div class="bg-white p-4 border border-gray-200">
+                    <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg" alt="Project A" class="w-full h-40 object-cover mb-4 border border-gray-300">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">BTECH CHAYAKADA</h3>
+                    <p class="text-gray-700 mb-4">
+                        My first web project, showcasing my skills in web development and design. It includes features like responsive design, interactive elements, and more.
+                    </p>
+                    <a href="https://adhith05.github.io/WEB-PROJECT/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium">
+                        View Project
+                    </a>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="bg-white p-4 border border-gray-200">
+                    <img src="https://www.remotelands.com/travelogues/app/uploads/2020/02/Padmanabhaswamy-1.jpg" alt="Project B" class="w-full h-40 object-cover mb-4 border border-gray-300">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">TRIVANDRUM TOURISM</h3>
+                    <p class="text-gray-700 mb-4">
+                       My second web project, which focuses on advanced features and user experience. It includes animations, form validations, and a clean layout.
+                    </p>
+                    <a href="https://adhith05.github.io/web-project-2/" target="_blank" class="text-blue-600 hover:text-blue-800 font-medium">
+                        View Project
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-gray-50 p-8 mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 text-center">Get in Touch</h2>
+            <div class="max-w-xl mx-auto">
+                <p class="text-center text-gray-700 mb-6">
+                    Feel free to send me a message!
+                </p>
+                <form class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input type="text" id="name" name="name" class="block w-full px-3 py-2 border border-gray-300 focus:outline-none focus:border-blue-500" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="email" name="email" class="block w-full px-3 py-2 border border-gray-300 focus:outline-none focus:border-blue-500" placeholder="your.email@example.com">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" class="block w-full px-3 py-2 border border-gray-300 focus:outline-none focus:border-blue-500" placeholder="Your message..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white px-6 py-2 text-base font-semibold hover:bg-blue-700">
+                        Send Message
+                    </button>
+                </form>
+
+                <div class="mt-6 text-center">
+                    <p class="text-gray-700 mb-2">Find me here:</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="mailto:adhithak651@gmail.com" class="text-gray-600 hover:text-blue-600">Email</a>
+                        <a href="https://github.com/adhith05" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600">GitHub</a>
+                        <a href="https://www.linkedin.com/in/adhith-a-k-201661330?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BXm4x2qCaRSKqqYvKzBrqOA%3D%3D" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-blue-600">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4 text-center">
+        <p>&copy; 2025 ADHITH A K. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        } else {
+            console.error("Mobile menu button or menu not found.");
+        }
+
+        // Prevent default form submission (for demonstration purposes)
+        const contactForm = document.querySelector('#contact form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+                // In a real application, you would send this data to a server
+                console.log('Form submitted!');
+                alert('Thank you for your message! (This is a demo, no actual email sent)');
+                contactForm.reset(); // Clear the form
+            });
+        } else {
+            console.error("Contact form not found.");
+        }
+    </script>
+</body>
+</html>
